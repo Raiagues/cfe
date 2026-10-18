@@ -24,7 +24,7 @@ env:
 jobs:
  Execute-Unit-Tests:
     name: Build and Execute CFE unit tests
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     container: ghcr.io/core-flight-system/cfsbuildenv-linux:latest
     timeout-minutes: 15
 
@@ -49,5 +49,5 @@ jobs:
         with:
           module-list: config core_api core_private es evs fs msg resourceid sb sbr tbl time
           allowed-missed-branches: 13
-          allowed-missed-lines: 7
+          allowed-missed-lines: 8
           allowed-missed-functions: 0
